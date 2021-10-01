@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Cars
+{% endblock title %}
+
+{% block content %}
+<h3 class="ms-3 py-3">Registered cars</h3>
+<div class="list-group list-group-flush">
+  {% for car in cars %}
+  <a href="{% url 'car-details' car.id %}" title="Click to view details" class="list-group-item list-group-item-action py-3">{{ car }}</a>
+  {% endfor %}
+  <li class="list-group-item"></li>
+</div>
+{% endblock content %}

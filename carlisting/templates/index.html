@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+<h1 class="mt-2">Kanairo Car Hire Home</h1>
+<p>
+  Welcome to Kanairo Car Hire LTD. You home of quality and safe vehicles for
+  hire
+</p>
+<h2 class="mt-5">Some Dynamic Content</h2>
+<p><strong>Our car listings at a Glance</strong></p>
+
+<ul>
+  <li><strong>Listed Vehicles:</strong> {{ cars_count }}</li>
+  <li><strong>Vehicles instance count:</strong> {{ car_instance_count }}</li>
+  <li><strong>Available Cars:</strong> {{ num_cars_available }}</li>
+</ul>
+<p>
+  You have visited this page {{ number_of_visits }} tim{{ number_of_visits|pluralize:"e,es" }}.
+</p>
+{% endblock %}

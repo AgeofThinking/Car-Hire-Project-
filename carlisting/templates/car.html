@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Car details
+{% endblock title %}
+
+{% block content %}
+<div class="text-center">
+  <h3 class="ms-3 py-3">Car details</h3>
+  <section>
+    <div class="mb-3">
+      <img src="{{ car.car_image.url }}" width="200" height="160" alt=""> 
+    </div>
+    <div class="mb-3"><span class="text-muted">Registration No:</span> {{ car.registration }}</div>
+    <div class="mb-3"><span class="text-muted">Car Owner:</span> {{ car.manufacturer }}</div>
+    <div class="mb-3"><span class="text-muted">Car Type:</span> {{ car.car_type }}</div>
+    <div class="mb-3"><span class="text-muted">Car Model:</span> {{ car.car_model }}</div>
+    <div class="mb-3"><span class="text-muted">Car Make:</span> {{ car.car_make }}</div>
+    <div class="mb-3"><span class="text-muted">Car Description:</span> {{ car.description }}</div>
+  </section>
+</div>
+{% endblock content %}
